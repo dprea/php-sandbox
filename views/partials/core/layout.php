@@ -21,9 +21,13 @@ if (isset($_SERVER['REQUEST_URI']))  {
 
 include_once("header.php");
 
-foreach($routes as $route) {
-    if($router == $route) {
-        include_once($route . ".php");
+if(in_array($router, $routes) == false) {
+    include_once("404.php");
+} else {
+    for($x =0; $x<count($routes); $x++) {
+        if($router == $routes[$x]) {
+            include_once($router . ".php");
+        }
     }
 }
 
