@@ -1,0 +1,29 @@
+{
+  "name": "PHP_Sandbox",
+  "description": "Dustin's PHP Sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Dustin Rea",
+  "license": "GNU",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zeldar/php-sandbox.git"
+  },
+  "engines": {
+    "node": "4.1.x",
+    "npm": "2.14.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.2.3",
+    "body-parser": "^1.9.3",
+    "bower": "~1.3.8",
+    "chalk": "^1.1.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.7"
+  }
+}

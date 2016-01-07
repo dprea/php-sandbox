@@ -1,0 +1,16 @@
+{
+  "name": "PHP_Sandbox",
+  "version": "0.1.0",
+  "description": "PHP Sandbox",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Dustin Rea"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zeldar/php-sandbox",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

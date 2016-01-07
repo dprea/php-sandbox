@@ -1,0 +1,432 @@
+/**
+*    Dustin's Bootstrap Theme
+*    Author: Dustin Rea
+*    Version: 0.8.1
+* ------------------------------------------------------------------------
+*    Styles Map Description (This section is the README)
+* ------------------------------------------------------------------------
+* ------------------------------------------------------------------------
+*    Bootstrap ~3.X is being used on the site and managed with bower
+*    The SASS version is used in conjunction with this main file.
+*    Together they make up the entire Style Map.
+* ------------------------------------------------------------------------
+*    #Compiling - /gulpfile.js with a sass:watch gulp.task();
+* ------------------------------------------------------------------------
+*    #Variables - The brand_variables.scss file contains the
+*        Default Bootstrap Variables that we needed to change.
+*        The structure of the brand_variables file is the same
+*        as the Bootstrap _variables.scss file, but also contains
+*        Tavel specific variables. 
+*
+*    Bootstrap Variable Replacements Happen Before the Bootstrap Import.
+*    This is necessary because of the !default SASS Variable set on the
+*    Bootstrap base variables.  Find out more here:
+*    http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_defaults_
+*
+*    Bootstrap Variables at 
+*    ./bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+* ------------------------------------------------------------------------
+*/
+
+
+// Default Neutrals
+$light-gray:        #EAE9E9;
+$dark-gray1:        #E0E1E1;
+$dark-gray2:        #454543;
+
+
+// Site Colors
+$tan:               #ECEEE5;
+$green:             #7DD667;
+$blue:              #01D4F1;
+$light-blue:        #15ACF1;
+$tavel-pink:        #F01D4F;
+$dark-bold-red:     #900B06;
+$dark-blue:         #0E233E;
+
+
+/****** SOCIAL MEDIA COLORS ****/
+$rss_orange: #f99a38;
+$facebook_blue: #3b5998;
+$twitter_blue: #00c0f7;
+$linkedin_blue: #0073b2;
+$google_yellow: #ffba02;
+$youtube_red: #c7312b;
+$flickr_pink: #f3006f;
+$pinterest_red: #ce1f26;
+$instagram_brown: #714437;
+$skype_blue: #3ec1f2;
+
+
+@import "./brand_variables.scss";
+
+
+/**
+*  Import Bootstrap using the updated Variables from above.
+*  The Code below this import will make changes to the
+*  Classes and IDs that are generated from the
+*  Bower bootstrap-sass module.
+*/
+
+@import "./bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+/**
+*  After Bootstrap Import: Overwrite necessary Styles from Output.
+*
+*  By using this "Pseudo Child Theme" architecture, we can pull
+*  new versions of the core bootstrap without completely
+*  destroying the SASS/CSS Framework.
+*
+*  DISCLAIMER: Bootstrap v3.x -> Bootstrap 4.0 has potential breaking functionality. 
+*  DISCLAIMER: Updates to the Individual Bootstrap SASS Package could break this.
+*/
+
+//
+// Global Default Styles
+// --------------------------------------------------
+html {
+    height: 100%; // Fixes Height Issue with Google Maps
+    overflow-x: hidden;
+    overflow-y: -moz-scrollbars-vertical; // Force scroll bar
+    overflow-y: scroll; // Force scroll bar
+    background: $dark-blue-black;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+
+//
+// Bootstrap Typography
+// --------------------------------------------------
+
+// FontAwesome
+// --------------------------------------------------
+.fa { font-family: Arial, FontAwesome; }
+
+
+//
+// MIXINS
+// --------------------------------------------------
+
+// GRADIENTS
+// USAGE: @include radial-gradient($gradient-start, $gradient-end);
+$gradient-opacity: 0.85;
+$gradient-start: rgba(129, 207, 219, $gradient-opacity);
+$gradient-end: rgba(105, 181, 194, $gradient-opacity);
+
+
+$gradient-end2: rgba(92, 169, 179, $gradient-opacity);
+
+@mixin radial-gradient($start, $end) {
+    background: radial-gradient($start, $end);
+}
+
+//
+// Default Element Styles
+// --------------------------------------------------
+
+// HTML5 / WRAPPER ELEMENTS
+article {
+    @media (max-width: $screen-md-min) {
+        padding-top: 74px;
+    } // END @media (max-width: $screen-md-max)
+    @media (min-width: 768px)  {
+        padding-top: 38px;
+    } // END @media (max-width: $screen-md-max)
+    @media (min-width: 992px) {
+        padding-top: 100px; // was 83px
+        padding-bottom: $padding-large-vertical * 2;
+    } // END @media (min-width: $screen-lg-min)
+}
+
+
+//
+// Forms
+// --------------------------------------------------
+.former-wrapper {
+    width: 100%; 
+    margin: auto;
+}
+
+.form-inline .input-group {
+    width: 100%;
+}
+
+//
+// Buttons
+// --------------------------------------------------
+.btn {
+    text-decoration: none;
+    
+    a { 
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+     &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-red {
+    background: $brand-red;
+    color: #FFFFFF;
+    font-weight: normal;
+    text-shadow: none;
+    border: 2px solid darken($brand-red, 5%);
+    @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+    
+    a {
+        color: #FFFFFF;
+        
+        &:hover {
+            text-decoration: none;
+            color: #EEEEEE;
+        }
+    }
+    
+    &:hover {
+        background: darken($brand-red, 10%);
+        color: #EEEEEE;
+        border: 2px solid darken($brand-primary, 15%);
+    }
+}
+
+.btn-default-brand-red {
+    background: $brand-red;
+    color: $white;
+    border: 2px solid $brand-red;
+    @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+    
+    a {
+        color: $white;
+    }
+    
+    &:hover {
+        background: $white;
+        color: $brand-red;
+        border: 2px solid darken($brand-red, 10%);
+        
+        a {
+            color: $brand-red;
+        }
+    }
+}
+
+.btn-primary {
+    background: $brand-primary;
+    color: #DEDEDE;
+    @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+        
+    a {
+        color: #DEDEDE;
+    }
+        
+    &:hover {
+        color: #FFFFFF;
+        background: darken($brand-primary, 10%);
+        
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Fixes Responsive Tables in Firefox
+// Source: http://getbootstrap.com/css/?#tables-responsive
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+//
+// Full Width Stripes
+// --------------------------------------------------
+// TODO: REFACTOR (Better version of frames-brands buttons)
+// TODO: Abstract button styling. 
+.stripe-brand-jumbo-gradient {
+    height: 550px;
+    color: #FFFFFF;
+    text-shadow: none;
+    @include radial-gradient($gradient-start, $gradient-end2);
+    
+    @media (max-width: 560px) {
+        height: 550px;
+    } // END @media (max-width: $screen-md-max)
+    @media (min-width: 768px)  {
+        height: 500px;
+    } // END @media (max-width: $screen-md-max)
+    @media (min-width: 992px) {
+        height: 360px;
+    } // END @media (min-width: $screen-lg-min)
+    
+     > .stripe-context {
+        background: transparent;
+        height: 100%;
+        padding: $padding-large-vertical * 2 0;
+        
+        @media (max-width: $screen-md-min) {
+            background: transparent;
+        } // END @media (max-width: $screen-md-max)
+        @media (min-width: 768px)  {
+            background: transparent;
+        } // END @media (max-width: $screen-md-max)
+        @media (min-width: 992px) {
+            background: transparent url('/wp-content/themes/tavel3/library/images/Woman_with_Glasses.png') no-repeat top left;
+        } // END @media (min-width: $screen-lg-min)
+    }
+    
+    .adwords-form-1-header {
+        padding-top: $padding-large-vertical * 2;
+    }
+    
+    button {
+        background: $brand-red;
+        color: #EEEEEE;
+        font-weight: bold;
+        text-shadow: none;
+        border: 2px solid darken($brand-red, 5%);
+        @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+        
+        &:hover {
+            background: darken($brand-red, 10%);
+            color: #EEEEEE;
+            border: 2px solid darken($brand-primary, 15%);
+        }
+    }
+}
+
+// Used on Home Page
+.stripe-brand-jumbo-wood {
+    height: 540px;
+    color: $white;
+    background: transparent url('/wp-content/themes/tavel3/library/images/woodbackground.jpg') repeat top left;
+    text-align: center;
+    
+    .h3 {
+        text-align: center;
+        border: 1px solid #FFFFFF; 
+        padding: $padding-large-vertical;
+    }
+    
+    > .stripe-context {
+        height: 100%;
+    }
+    
+    button {
+        background: $brand-red;
+        color: $white;
+        border: 2px solid $brand-red;
+        text-shadow: none;
+        @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+        
+        a {
+            color: $white;
+        }
+        
+        &:hover {
+            color: $brand-red;
+            background: darken($brand-red, 10%);
+            border: 2px solid darken($brand-red, 10%);
+        }
+    }
+}
+
+// GENERAL USE CASE
+.stripe-brand-jumbo {
+    height: 360px;
+    color: $light-teal-bg-text;
+    text-shadow: none;
+    background: $brand-primary-light;
+    
+    > .stripe-context {
+        background: $brand-primary-light url('/wp-content/themes/tavel3/library/images/Woman_with_Glasses.png') no-repeat top left;
+        height: 100%;
+    }
+    
+    button {
+        background: $brand-red;
+        color: $white;
+        border: 2px solid $brand-red;
+        text-shadow: none;
+        @include transition(all ease-in-out .15s, color ease-in-out .15s, border-radius ease-in-out .15s, text-shadow ease-in-out .15s);
+        
+        a {
+            color: $white;
+        }
+        
+        &:hover {
+            color: $brand-red;
+            background: darken($brand-red, 10%);
+            border: 2px solid darken($brand-red, 10%);
+        }
+    }
+}
+
+
+/**
+* Helper Classes
+*/
+
+// MARGINS
+.vertical-top-margin-lg {
+    margin-top: $padding-large-vertical;
+}
+
+.vertical-top-margin-lgx2 {
+    margin-top: $padding-large-vertical * 2;
+}
+
+.vertical-top-margin-lgx3 {
+    margin-top: $padding-large-vertical * 3;
+}
+
+.vertical-bottom-margin-lg {
+    margin-bottom: $padding-large-vertical;
+}
+
+.vertical-bottom-margin-lgx2 {
+    margin-bottom: $padding-large-vertical * 2;
+}
+
+.vertical-bottom-margin-lgx3 {
+    margin-bottom: $padding-large-vertical * 3;
+}
+
+.vertical-bottom-margin-lgx4 {
+    margin-bottom: $padding-large-vertical * 4;
+}
+
+
+.vertical-margin-lgx2 {
+    margin-top: $padding-large-vertical * 2;
+    margin-bottom: $padding-large-vertical * 2;
+}
+
+
+// Margin: auto
+.margin-auto-helper {
+    margin: auto;
+}
+
+
+// PADDING
+.vertical-top-padding-lgx2 {
+    padding-top: $padding-large-vertical * 2;
+}
+
+.vertical-bottom-padding-lgx2 {
+    padding-bottom: $padding-large-vertical * 2;
+}
+
+.vertical-padding-lgx2 {
+    padding: $padding-large-vertical * 2;
+}
+
+.vertical-padding-lgx3 {
+    padding: $padding-large-vertical * 3;
+}

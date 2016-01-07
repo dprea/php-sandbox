@@ -1,0 +1,42 @@
+[06-Jan-2016 17:19:50 UTC] PHP Warning:  include_once(/views/partials/core/header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:19:50 UTC] PHP Stack trace:
+[06-Jan-2016 17:19:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:19:50 UTC] PHP Warning:  include_once(): Failed opening '/views/partials/core/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:19:50 UTC] PHP Stack trace:
+[06-Jan-2016 17:19:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:19:50 UTC] PHP Warning:  include_once(/views/partials/core/footer.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:19:50 UTC] PHP Stack trace:
+[06-Jan-2016 17:19:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:19:50 UTC] PHP Warning:  include_once(): Failed opening '/views/partials/core/footer.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:19:50 UTC] PHP Stack trace:
+[06-Jan-2016 17:19:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:22 UTC] PHP Warning:  include_once(/views/partials/core/header.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:20:22 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:22 UTC] PHP Warning:  include_once(): Failed opening '/views/partials/core/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:20:22 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:22 UTC] PHP Warning:  include_once(/views/partials/core/footer.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:20:22 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:22 UTC] PHP Warning:  include_once(): Failed opening '/views/partials/core/footer.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:20:22 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:54 UTC] PHP Warning:  include_once(): https:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:55 UTC] PHP Warning:  include_once(https://php-sandbox-dprea.c9users.io/views/partials/core/header.php): failed to open stream: no suitable wrapper could be found in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:55 UTC] PHP Warning:  include_once(): Failed opening 'https://php-sandbox-dprea.c9users.io/views/partials/core/header.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 10
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:55 UTC] PHP Warning:  include_once(): https:// wrapper is disabled in the server configuration by allow_url_include=0 in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:55 UTC] PHP Warning:  include_once(https://php-sandbox-dprea.c9users.io/views/partials/core/footer.php): failed to open stream: no suitable wrapper could be found in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
+[06-Jan-2016 17:20:55 UTC] PHP Warning:  include_once(): Failed opening 'https://php-sandbox-dprea.c9users.io/views/partials/core/footer.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/views/partials/core/layout.php on line 20
+[06-Jan-2016 17:20:55 UTC] PHP Stack trace:
+[06-Jan-2016 17:20:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/partials/core/layout.php:0
